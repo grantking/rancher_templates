@@ -1,4 +1,4 @@
-name: "AIDE — AIr Data Explorer"
-description: "Elasticsearch app for Air Quality e-Reporting."
+name: "ACME - Full stack"
+description: "Build an ACME environment"
 version: "1.5-rancher1"
-category: "Search services"
+category: "ACME"
