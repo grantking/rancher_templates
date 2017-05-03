@@ -1,0 +1,7 @@
+name: ACME stack deployment
+description: |
+  Start a full ACME stack
+version: v0.1.0-rancher1
+category: Acme
+labels:
+  io.rancher.orchestration.supported: 'cattle'
