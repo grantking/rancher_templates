@@ -22,7 +22,7 @@ services:
   b2blb:
     image: rancher/lb-service-haproxy:v0.6.4
     ports:
-    - 1000:1000/tcp
+    - ${b2b_port}:${b2b_port}/tcp
     labels:
       io.rancher.container.agent.role: environmentAdmin
       io.rancher.container.create_agent: 'true'
