@@ -1,7 +1,0 @@
-name: "Logcentral rsync"
-description: |
-  (Experimental) Sync Logcentral
-version: "2.0.2-rancher1"
-maintainer: "Antonio De Marinis <demarinis@eea.europa.eu>"
-minimum_rancher_version: v1.0.2
-category: "Tools"

@@ -1,4 +1,0 @@
-version: '2'
-services:
-  master:
-    image: rancher/external-service
