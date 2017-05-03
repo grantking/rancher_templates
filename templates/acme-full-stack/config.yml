@@ -1,4 +1,4 @@
 name: "ACME - Full stack"
 description: "Build an ACME environment"
-version: "1.5-rancher1"
+version: "v1.0-rancher1"
 category: "ACME"
