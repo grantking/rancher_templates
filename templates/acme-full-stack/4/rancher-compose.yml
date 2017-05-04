@@ -1,8 +1,8 @@
 .catalog:
   name: "acme-full-stack"
-  version: "v1.3-rancher1"
+  version: "v1.4-rancher1"
   description: "ACME full stack"
-  uuid: acme-full-stack-3
+  uuid: acme-full-stack-4
   questions:
     - variable: "b2b_port"
       description: "B2B port to expose"
@@ -20,7 +20,7 @@
       description: "API port"
       label: "Port:"
       required: true
-      default: "1003"
+      default: "1002"
       type: "int"
 version: '2'
 services:
