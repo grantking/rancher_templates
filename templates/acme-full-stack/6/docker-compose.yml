@@ -1,0 +1,77 @@
+version: '2'
+services:
+  mongo:
+    image: mongo
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  b2c:
+    image: grantking-localdocker.jfrog.io/b2c
+    environment:
+      spring.profiles.active: dev2
+      acme_config_url: http://configservice:8888/config
+    stdin_open: true
+    tty: true
+    links:
+    - mysql:mysql
+    - redis:redis
+    - configservice:configservice
+    - mongo:mongo
+    labels:
+      io.rancher.container.pull_image: always
+  b2b:
+    image: grantking-localdocker.jfrog.io/b2b
+    environment:
+      spring.profiles.active: dev2
+      acme_config_url: http://configservice:8888/config
+    stdin_open: true
+    tty: true
+    links:
+    - mysql:mysql
+    - mongo:mongo
+    - configservice:configservice
+    - redis:redis
+    labels:
+      io.rancher.container.pull_image: always
+  front-door:
+    image: rancher/lb-service-haproxy:v0.6.4
+    ports:
+    - ${ui_port}:${ui_port}/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin
+      io.rancher.container.create_agent: 'true'
+      io.rancher.scheduler.global: 'true'
+  b2b-ui:
+    image: grantking-localdocker.jfrog.io/b2b_ui
+    stdin_open: true
+    tty: true
+    links:
+    - gateway:gateway
+    labels:
+      io.rancher.container.pull_image: always
+  mysql:
+    image: grantking-localdocker.jfrog.io/mysql-qa-data
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  configservice:
+    image: rancher/dns-service
+    external_links:
+    - configserver/configserver:configserver
+  redis:
+    image: redis:3.2.8
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  gateway:
+    image: grantking-localdocker.jfrog.io/gateway
+    stdin_open: true
+    tty: true
+    links:
+    - b2b:b2b
+    - b2c:b2c
+    labels:
+      io.rancher.container.pull_image: always
