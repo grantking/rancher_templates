@@ -4,24 +4,6 @@
   description: "ACME full stack"
   uuid: acme-full-stack-6
   questions:
-    - variable: "b2b_port"
-      description: "B2B port to expose"
-      label: "Port:"
-      required: true
-      default: "1000"
-      type: "int"
-    - variable: "b2c_port"
-      description: "B2C port to expose"
-      label: "Port:"
-      required: true
-      default: "1001"
-      type: "int"
-    - variable: "api_port"
-      description: "API port"
-      label: "Port:"
-      required: true
-      default: "1002"
-      type: "int"
     - variable: "ui_port"
       description: "UI port"
       label: "Port:"
