@@ -23,7 +23,7 @@
       default: "1002"
       type: "int"
     - variable: "ui_port"
-      description: "API port"
+      description: "UI port"
       label: "Port:"
       required: true
       default: "1003"
