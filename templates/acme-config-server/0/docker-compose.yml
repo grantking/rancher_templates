@@ -3,9 +3,9 @@ services:
   configserver:
     image: grantking-localdocker.jfrog.io/config-server
     environment:
-      git_url: ${git-url}
-      git_user: ${git-user}
-      git_password: ${git-password}
+      git_url: ${git_url}
+      git_user: ${git_user}
+      git_password: ${git_password}
     stdin_open: true
     tty: true
     labels:
