@@ -1,4 +1,4 @@
 name: "ACME - Config Server"
 description: "Build an ACME config server"
-version: "v1.1-rancher1"
+version: "v1.0-rancher1"
 category: "ACME"

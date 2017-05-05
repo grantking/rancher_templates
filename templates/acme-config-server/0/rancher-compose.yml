@@ -4,19 +4,19 @@
   description: "ACME config server"
   uuid: acme-full-stack-0
   questions:
-    - variable: "git-url"
+    - variable: "git_url"
       description: "Git url"
       label: "Git url:"
       required: true
       default: "https://server/repo.git"
       type: "string"
-    - variable: "git-user"
+    - variable: "git_user"
       description: "Git user"
       label: "Git user:"
       required: true
       default: "git-user-name"
       type: "string"
-    - variable: "git-password"
+    - variable: "git_password"
       description: "Git password"
       label: "Git password:"
       required: true
